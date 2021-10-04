@@ -10,9 +10,9 @@ class APIController extends Controller
     public function showMessage()
     {
         $response = [
-            'name' => "Leonardo",
-            'lastname' => "Ribeiro",
-            "age" => 26,
+            'name' => "Bruno",
+            'lastname' => "Mota",
+            "age" => 29,
             "programming_language" => "PHP" 
         ];
 

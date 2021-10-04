@@ -52,4 +52,12 @@ class APIPessoasController extends Controller
         return Response($result, $result['status']);
     }
 
+    public function test() {
+        $uid = uniqid();
+        Redis::set($uid, "Bruno");
+        $expiresAt = now()->addMinutes(1);
+        Cache::put($uid, "Bruno", $expiresAt);
+        return Redis::get($uid);
+    }
+
 }
